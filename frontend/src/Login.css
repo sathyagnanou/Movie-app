@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff; /* Set the background color of the entire page to black */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Make the body take up the full height of the viewport */
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff; /* Text color orange */
+}
+
+.branding {
+  margin-bottom: 20px;
+}
+
+.branding h2 {
+  margin: 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+.login-container {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #FFA500; /* Border color orange */
+  border-radius: 10px; /* Softer rounded corners */
+  box-shadow: 0 0 15px rgba(227, 0, 0, 0.5); /* Softer, more spread-out shadow */
+  background-color: #1a1a1a; /* Dark gray background for better contrast */
+  color: #ffffff; /* Text color orange */
+}
+
+.login-container h2 {
+  text-align: center;
+  color: #FFA500; /* Text color orange */
+  margin-bottom: 20px; /* Margin-bottom */
+}
+
+.login-container form div {
+  margin-bottom: 15px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px; /* Increased padding */
+  box-sizing: border-box;
+  border: 1px solid #FFA500; /* Border color orange */
+  background-color: #000; /* Background color black */
+  color: #FFA500; /* Text color orange */
+  border-radius: 5px; /* Rounded corners for inputs */
+}
+
+.login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #FFA500; /* Button background color orange */
+  color: #000; /* Button text color black */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.login-container button:hover {
+  background-color: #FF8C00; /* Darkened hover background color */
+}
+
+p {
+  color: #ffffff; /* Text color orange */
+}
+
+.message {
+  margin-top: 15px;
+  color: #FF4500; /* Message color red-orange */
+  font-weight: bold;
+}
