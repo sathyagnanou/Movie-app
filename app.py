@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, session, send_from_directory
-from flask_bcrypt import Bcrypt  # pip install Flask-Bcrypt
-from flask_cors import CORS, cross_origin  # pip install Flask-Cors
+from flask_bcrypt import Bcrypt
+from flask_cors import CORS, cross_origin
 import openai
 import pandas as pd
 from models import db, User
@@ -20,7 +20,7 @@ with app.app_context():
     db.create_all()
 
 # OpenAI API Key
-openai.api_key = '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'
+openai.api_key = 'sk-your-openai-api-key'
 
 # Load movie dataset
 def getAllMovies():
@@ -64,7 +64,6 @@ def chat():
 @app.route('/api/movies', methods=['GET'])
 @cross_origin()
 def movies():
-    # Return all movies from the dataset
     movies = getAllMovies()
     result = {'arr': movies}
     return jsonify(result)

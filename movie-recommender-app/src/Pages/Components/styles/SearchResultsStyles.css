@@ -1,30 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,800&family=Roboto:wght@400;500;700&display=swap");
-
 .movie-details {
-    width: 100%;           /* Full width */
-    height: 100%;          /* Full height */
-    margin: 0;            /* Remove margin */
-    padding: 20px;        /* Add some padding */
+    margin-top: 3%;
     font-family: "Montserrat", sans-serif;
-    box-sizing: border-box; /* Ensure padding doesn't affect size */
 }
-
 .overveiwContent {
     font-size: medium;
 }
-
 .left-box {
     color: #fff !important;
     margin: 15px 0;
     padding: 20px;
     font-family: "Montserrat", sans-serif;
 }
-
 .casting {
     transition: width 0.5s, height 0.5s;
     text-decoration: none;
 }
-
 .casting a {
     text-decoration: none;
 }
@@ -36,16 +27,13 @@
     margin-bottom: 35px;
     transition: width 0.5s, height 0.5s;
 }
-
 .topTitle-Movie {
     font-weight: 700;
 }
-
 .casting img:hover {
     height: 80px;
     width: 80px;
 }
-
 .main-img {
     height: 420px;
     box-shadow: -4px 4px 5px 0 #000;
@@ -56,7 +44,6 @@
     background-color: #0f1014;
     margin-top: 4.5%;
 }
-
 .RecommendHeading {
     color: #fff;
     font-family: "Montserrat";
@@ -70,14 +57,15 @@
     color: #fff !important;
     border-radius: 0.4em;
     cursor: pointer;
+
     font-weight: 400;
     padding: 4px 9px;
     background: #3a86ff;
     font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     border-color: #3a86ff !important;
     transition: width 0.2s, height 0.2s;
 }
-
 .overveiwContent {
     font-size: 5vw;
 }
@@ -90,11 +78,9 @@
     top: 0;
     bottom: 0;
 }
-
 .trailer-bttn:hover {
     padding: 5px 12px;
 }
-
 .recommendedGrid {
     display: grid;
     gap: 15px;
@@ -104,7 +90,6 @@
 .MainBackGround {
     background-size: contain;
 }
-
 .close-bttn {
     z-index: 100;
     margin-top: 15px;
@@ -112,31 +97,28 @@
     color: #fff !important;
     border-radius: 0.4em;
     cursor: pointer;
+
     font-weight: 400;
     padding: 4px 9px;
     background: #3a86ff;
     font-family: "Montserrat", sans-serif;
+    font-weight: 400;
     border-color: #3a86ff !important;
     transition: width 0.2s, height 0.2s;
 }
-
 .close-bttn:hover {
     padding: 5px 12px;
 }
-
 .trailerContainer {
     position: relative;
 }
-
 .DisplayOn {
     display: flex;
     justify-content: center;
 }
-
 .DisplayOFF {
     display: none;
 }
-
 @media screen and (max-width: 1080px) {
     .recommendedGrid {
         gap: 20px;
@@ -146,7 +128,6 @@
         background-size: auto;
     }
 }
-
 @media screen and (max-width: 900px) {
     .recommendedGrid {
         gap: 12px;

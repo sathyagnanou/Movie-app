@@ -4,35 +4,50 @@ import "./styles/SearchBarStyles.css";
 
 function SearchBar({ movies, placeholder }) {
     const navigate = useNavigate();
-    const [inputValue, setInputValue] = useState(""); // Initialize with an empty string
+    const [inputValue, setInputValue] = useState("");
     const [filteredMovies, setFilteredMovies] = useState([]);
     const [notFound, setNotFound] = useState(false);
 
     // Log the movies to the console
     console.log(movies);
 
-    const handleChange = (event) => {
+    const searchMoviesFromTMDb = async (query) => {
+        const apiKey = 'c0fd9fb190ecde9fe0707e140057cb0f'; // Replace with your actual TMDb API Key
+        const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`);
+        const data = await response.json();
+        return data.results.map(movie => movie.title); // Extract only movie titles
+    };
+
+    const handleChange = async (event) => {
         setNotFound(false);
         const wordEntered = event.target.value.trim();
         setInputValue(wordEntered);
         
-        const newFilter = movies.filter((value) => {
+        const localFilter = movies.filter((value) => {
             return value.toLowerCase().includes(wordEntered.toLowerCase());
         });
 
-        setFilteredMovies(newFilter.length > 0 ? newFilter : []);
+        if (localFilter.length > 0) {
+            setFilteredMovies(localFilter);
+        } else if (wordEntered.length > 0) {
+            // If not found locally, search in TMDb
+            const tmdbMovies = await searchMoviesFromTMDb(wordEntered);
+            setFilteredMovies(tmdbMovies.length > 0 ? tmdbMovies : []);
+        } else {
+            setFilteredMovies([]);
+        }
     };
 
-    const buttonSubmit = () => {
-        let flag = false;
+    const buttonSubmit = async () => {
+        let found = movies.some(movie => movie.toLowerCase() === inputValue.toLowerCase());
 
-        for (let movie of movies) {
-            if (inputValue.toLowerCase() === movie.toLowerCase()) {
-                flag = true;
-                break;
-            }
+        if (!found) {
+            // Check from TMDb if the movie is found
+            const tmdbMovies = await searchMoviesFromTMDb(inputValue);
+            found = tmdbMovies.some(movie => movie.toLowerCase() === inputValue.toLowerCase());
         }
-        if (flag) {
+
+        if (found) {
             navigate(`/search/${inputValue}`);
         } else {
             setNotFound(true);
@@ -48,7 +63,7 @@ function SearchBar({ movies, placeholder }) {
                         className="searchingbar"
                         type="text"
                         title="Search"
-                        value={inputValue} // Set value to inputValue
+                        value={inputValue}
                         onChange={handleChange}
                         onKeyPress={(e) => {
                             if (e.key === "Enter") {
@@ -71,7 +86,7 @@ function SearchBar({ movies, placeholder }) {
                     {filteredMovies.slice(0, 10).map((movie) => (
                         <div
                             className="searchItem"
-                            key={movie} // Add a unique key for each item
+                            key={movie}
                             onClick={() => navigate(`/search/${movie}`)}
                         >
                             {movie}
