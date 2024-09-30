@@ -109,7 +109,7 @@ const SearchResult = () => {
                     <div className="row ">
                         <div className="col-md-6 left-box col-md-push-6">
                             <h1 className="topTitle-Movie">{searchedMovie.title}</h1>
-                            <p className="overviewContent">{searchedMovie.overview}</p>
+                            
                             <p>Cast: </p>
                             <div className="casting">
                                 {castMembers.map((member) =>

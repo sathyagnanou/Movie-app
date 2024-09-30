@@ -1,5 +1,5 @@
 # Movie-app
-
+![Python](https://img.shields.io/badge/Python-3.9.6-blueviolet)     ![Framework](https://img.shields.io/badge/Framework-Flask-red) ![Frontend](https://img.shields.io/badge/Frontend-React-green) ![API](https://img.shields.io/badge/API-TMDB-fcba03)
 ## Overview  📋
 1. This is a movie recommender app with the help of a chatbot.
 2. It enables user to search and go through various details of movies like cast, genre, trailer of movies with the help of an API by TMBD.
@@ -33,7 +33,10 @@
     ```shell
     $ npm start
     ```
-     
+ 
+ ## Architecture 
+![Architecture](./images/Architec.png)
+
 
  ## References 
  1. TMDB's API : https://www.themoviedb.org/documentation/api
