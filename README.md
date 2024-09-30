@@ -35,7 +35,7 @@
     ```
  
  ## Architecture 
-![Architecture](./Components/images/Architec.png)
+![Architecture](.images/Architec.png)
 
 
  ## References 
