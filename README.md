@@ -35,8 +35,8 @@
     ```
  
  ## Architecture 
-(![Architecture Diagram](movie-recommender-app/src/Pages/Components/images/Architec.png)
-)
+![Architecture Diagram](movie-recommender-app/src/Pages/Components/images/Architec.png)
+
 
 
  ## References 
