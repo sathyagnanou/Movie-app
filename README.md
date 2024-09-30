@@ -1,5 +1,5 @@
 # Movie Recommendation App using Chatbot 
-![Python](https://img.shields.io/badge/Python-3.9.6-blueviolet)     ![Framework](https://img.shields.io/badge/Framework-Flask-red) ![Frontend](https://img.shields.io/badge/Frontend-React-green) ![API](https://img.shields.io/badge/API-TMDB-fcba03)
+![Python](https://img.shields.io/badge/Python-3.9.6-blueviolet)     ![Framework](https://img.shields.io/badge/Framework-Flask-red) ![Frontend](https://img.shields.io/badge/Frontend-React-green) ![API](https://img.shields.io/badge/API-TMDB-fcba03) ![API](https://img.shields.io/badge/API-OPENAI-7CB9E8)
 ## Overview  📋
 1. This is a movie recommender app with the help of a chatbot.
 2. It enables user to search and go through various details of movies like cast, genre, trailer of movies with the help of an API by TMBD.
