@@ -41,4 +41,4 @@
 
  ## References 
  1. TMDB's API : https://www.themoviedb.org/documentation/api
- 2. ChatGPT API : https://platform.openai.com/docs/api-reference
+ 2. OpenAI API : https://platform.openai.com/docs/api-reference
